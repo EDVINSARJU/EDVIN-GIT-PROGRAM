@@ -1,0 +1,9 @@
+n=input("enter string")
+a=n[0]
+for i in n:
+    if i==a:
+         n=n.replace(i,'$')
+         n=a+n[1:]
+print(n)
+
+
