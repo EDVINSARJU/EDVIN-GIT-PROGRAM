@@ -1,0 +1,64 @@
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function IsEmpty(objectfield,stringfield)
+{
+    objectvalue = objectfield.value.length;
+    if(objectvalue=="")
+    {
+        alert("Oops.. Please fill out the value of "+stringfield);
+        objectfield.style.background = 'Yellow';
+        return false;
+    }
+    else
+        return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+function validate_email(field,alerttxt)
+{
+    with (field)
+    {
+        apos=value.indexOf("@");
+        dotpos=value.lastIndexOf(".");
+        if (apos<1||dotpos-apos<2){
+            alert(alerttxt);return false;
+        }
+        else {
+            return true;
+        }
+    }
+}
